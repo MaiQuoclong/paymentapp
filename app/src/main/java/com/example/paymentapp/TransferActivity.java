@@ -1,5 +1,6 @@
 package com.example.paymentapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,7 +17,7 @@ public class TransferActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_transfer); // layout màn hình 6
+        setContentView(R.layout.activity_transfer);
 
         edtReceiver = findViewById(R.id.edtReceiver);
         edtAmount = findViewById(R.id.edtAmount);
@@ -25,14 +26,17 @@ public class TransferActivity extends AppCompatActivity {
         btnConfirmTransfer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String receiver = edtReceiver.getText().toString();
-                String amount = edtAmount.getText().toString();
+                String receiver = edtReceiver.getText().toString().trim();
+                String amount = edtAmount.getText().toString().trim();
 
                 if (receiver.isEmpty() || amount.isEmpty()) {
                     Toast.makeText(TransferActivity.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(TransferActivity.this, "Transfer Successful!", Toast.LENGTH_SHORT).show();
-                    finish(); // trở về BankDashboardActivity
+                    // Gửi dữ liệu sang ConfirmTransferActivity
+                    Intent intent = new Intent(TransferActivity.this, ConfirmTransferActivity.class);
+                    intent.putExtra("receiver", receiver);
+                    intent.putExtra("amount", amount);
+                    startActivity(intent);
                 }
             }
         });
