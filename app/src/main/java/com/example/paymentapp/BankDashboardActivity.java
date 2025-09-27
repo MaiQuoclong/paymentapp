@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,11 +19,12 @@ public class BankDashboardActivity extends AppCompatActivity {
         btnTransferMoney = findViewById(R.id.btnTransferMoney);
         btnLogoutBank = findViewById(R.id.btnLogoutBank);
 
-        // Check Balance (demo toast)
+        // Check Balance → sang màn hình 9 (HistoryActivity)
         btnCheckBalance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(BankDashboardActivity.this, "Balance: $1,000", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(BankDashboardActivity.this, HistoryActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -41,7 +41,6 @@ public class BankDashboardActivity extends AppCompatActivity {
         btnLogoutBank.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(BankDashboardActivity.this, "Logged out", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });

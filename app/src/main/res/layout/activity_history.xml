@@ -2,22 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
-    android:padding="24dp">
+    android:padding="16dp">
 
     <TextView
-        android:id="@+id/tvSuccessMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Transfer Successful!"
+        android:text="Transaction History"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:layout_marginBottom="32dp" />
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp" />
 
-    <Button
-        android:id="@+id/btnViewHistory"
+    <ListView
+        android:id="@+id/lvHistory"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="View History" />
+        android:layout_height="match_parent"/>
 </LinearLayout>
