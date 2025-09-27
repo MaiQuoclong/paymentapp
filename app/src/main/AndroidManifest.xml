@@ -29,6 +29,8 @@
         <activity android:name=".BankLoginActivity" />
         <activity android:name=".BankLoginScreenActivity" />
         <activity android:name=".BankDashboardActivity" />
+        <activity android:name=".TransferActivity" />
+
     </application>
 
 </manifest>
