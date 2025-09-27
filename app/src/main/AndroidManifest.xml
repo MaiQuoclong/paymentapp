@@ -32,6 +32,8 @@
         <activity android:name=".TransferActivity" />
         <activity android:name=".ConfirmTransferActivity" />
         <activity android:name=".SuccessActivity" />
+        <activity android:name=".HistoryActivity" />
+
     </application>
 
 </manifest>
