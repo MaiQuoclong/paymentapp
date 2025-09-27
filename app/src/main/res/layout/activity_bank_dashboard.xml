@@ -6,40 +6,32 @@
     android:gravity="center"
     android:padding="24dp">
 
-    <!-- Title -->
     <TextView
-        android:id="@+id/tvSetPayment"
+        android:id="@+id/tvWelcomeBank"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Set Payment"
-        android:textSize="22sp"
+        android:text="Welcome, User!"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_marginBottom="32dp"/>
-
-    <!-- Bank button -->
-    <Button
-        android:id="@+id/btnBank"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Bank"/>
+        android:layout_marginBottom="32dp" />
 
     <Button
-        android:id="@+id/btnWallet"
+        android:id="@+id/btnCheckBalance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Wallet"/>
+        android:text="Check Balance"
+        android:layout_marginBottom="16dp"/>
 
     <Button
-        android:id="@+id/btnStore"
+        android:id="@+id/btnTransferMoney"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Store"/>
+        android:text="Transfer Money"
+        android:layout_marginBottom="16dp"/>
 
     <Button
-        android:id="@+id/btnCash"
+        android:id="@+id/btnLogoutBank"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cash"/>
-
-
+        android:text="Logout"/>
 </LinearLayout>

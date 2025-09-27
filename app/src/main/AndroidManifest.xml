@@ -27,7 +27,8 @@
 
         <!-- Bank Login Activity (mở khi login thành công) -->
         <activity android:name=".BankLoginActivity" />
-
+        <activity android:name=".BankLoginScreenActivity" />
+        <activity android:name=".BankDashboardActivity" />
     </application>
 
 </manifest>
