@@ -32,6 +32,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-;
+        // Bấm Login -> kiểm tra tài khoản
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String username = edtUsername.getText().toString();
+                String password = edtPassword.getText().toString();
+
+                if (username.equals("mql") && password.equals("123456")) {
+                    Intent intent = new Intent(MainActivity.this, BankLoginActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(MainActivity.this, "Wrong username or password", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 }

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvSetPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Payment"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Bank button -->
+    <Button
+        android:id="@+id/btnBank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bank"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Wallet button -->
+    <Button
+        android:id="@+id/btnWallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wallet"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Store button -->
+    <Button
+        android:id="@+id/btnStore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Store"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Cash button -->
+    <Button
+        android:id="@+id/btnCash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cash"/>
+
+</LinearLayout>

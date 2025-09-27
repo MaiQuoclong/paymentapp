@@ -25,7 +25,8 @@
         <!-- Create Account Activity -->
         <activity android:name=".CreateAccountActivity" />
 
-
+        <!-- Bank Login Activity (mở khi login thành công) -->
+        <activity android:name=".BankLoginActivity" />
 
     </application>
 
