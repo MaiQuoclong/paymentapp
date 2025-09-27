@@ -30,6 +30,15 @@ public class ConfirmTransferActivity extends AppCompatActivity {
         // Hiển thị chi tiết giao dịch
         tvTransferDetails.setText("Transfer $" + amount + "\nTo: " + receiver);
 
+        // Confirm → chuyển sang màn hình SuccessActivity (màn 8)
+        btnConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent successIntent = new Intent(ConfirmTransferActivity.this, SuccessActivity.class);
+                startActivity(successIntent);
+                finish();
+            }
+        });
 
 
         // Cancel → quay lại màn 6
