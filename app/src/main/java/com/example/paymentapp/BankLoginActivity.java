@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.paymentapp.R;
+import android.content.Intent;
 
 public class BankLoginActivity extends AppCompatActivity {
     Button btnBank, btnWallet, btnStore, btnCash;
@@ -31,5 +32,13 @@ public class BankLoginActivity extends AppCompatActivity {
 
         btnCash.setOnClickListener(v ->
                 Toast.makeText(this, "Cash selected", Toast.LENGTH_SHORT).show());
+        btnBank.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BankLoginActivity.this, BankLoginScreenActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
